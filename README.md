@@ -1,14 +1,16 @@
 # PatriotVPN
-An extremely fast, end-to-end encrypted SOCKS5 proxy based on Shadowsocks.
+An extremely fast, end-to-end encrypted SOCKS5 proxy based on [Shadowsocks][1]
 
-### Dependencies:
+[1]:<https://github.com/shadowsocks/shadowsocks/tree/master> "Shadowsocks github repo"
+
+#### Dependencies:
 ##### Install shadowsocks-libev, surf, encfs, speedtest-cli, proxychains
     sudo apt-get install shadowsocks-libev surf encfs speedtest-cli proxychains
     
-#### In Arch:
+##### In Arch:
         sudo pacman -S shadowsocks-libev surf encfs speedtest-cli proxychains
 
-#### Edit /etc/proxychains.conf as follows:
+##### Edit /etc/proxychains.conf as follows:
 
     # proxychains.conf  VER 4.x
     #
@@ -127,30 +129,37 @@ An extremely fast, end-to-end encrypted SOCKS5 proxy based on Shadowsocks.
     #socks4         127.0.0.1 9051
     socks5  127.0.0.1 1080
 
-#### Save and exit.
+##### Save and exit.
 
-#### Change the script to an executable:
+##### Change the script to an executable:
     chmod +x patvpn.py
     
-#### Create a symlink to /usr/bin
+##### Create a symlink to /usr/bin
     ln -s /path/to/patvpn.py /usr/bin/patvpn
     
-#### Run PatriotVPN
+##### Run PatriotVPN
     patvpn
     
-#### When you see the menu, hit option 7 to create the encrypted file system, answer 'y' to create both folders necessary, choose "p" for pre-configured paranoia mode, create a passphrase for the encrypted file system. Hit any key to continue.
+##### When you see the menu, hit option 7 to create the encrypted file system, answer 'y' to create both folders necessary, choose "p" for pre-configured paranoia mode, create a passphrase for the encrypted file system. Hit any key to continue.
 
+```diff
+- NOTE: Encfs does NOT encrypt your traffic. 
+It only provides an encrypted container to store your 
+configs and other things you might want to keep in 
+the folder. Just be sure to point your browsers 
+download location to that folder.
+```
 
-#### Pick option 1 to initialize the configs. When asked for the pass enter the pass given in the install guide(beta-testers)
+##### Pick option 1 to initialize the configs. When asked for the pass enter the pass given in the install guide(beta-testers)
 
-#### Pick option 3 then enter 
+##### Pick option 3 then enter 
     pat 
-#### to connect
+##### to connect
 
-#### Check your connection with 
+##### Check your connection with 
     proxychains curl ipinfo.io
     
-#### in another terminal, or pick option 5 to check for DNS leaks
+##### in another terminal, or pick option 5 to check for DNS leaks
 
 
 
