@@ -4,6 +4,9 @@ An extremely fast, end-to-end encrypted SOCKS5 proxy based on Shadowsocks.
 ### Dependencies:
 ##### Install shadowsocks-libev, surf, encfs, speedtest-cli, proxychains
     sudo apt-get install shadowsocks-libev surf encfs speedtest-cli proxychains
+    
+#### In Arch:
+        sudo pacman -S shadowsocks-libev surf encfs speedtest-cli proxychains
 
 #### Edit /etc/proxychains.conf as follows:
 
