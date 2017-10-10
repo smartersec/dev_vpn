@@ -44,7 +44,7 @@ def umnt():
 
 def create_conf():
     passw = getpass.getpass('Enter the VPN password:')
-    with open("/home/cmos/patvpn/pat.json", "w") as outfile:
+    with open("~/patvpn/pat.json", "w") as outfile:
         json.dump({"server":"77.73.66.65", "server_port":31333, "local_address":"127.0.0.1", "local_port":1080, "password":"%s" % passw, "timeout":300, "method":"aes-256-cfb", "fast_open":False}, outfile, indent=4)
 
 
