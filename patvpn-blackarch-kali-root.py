@@ -56,7 +56,7 @@ def main():
     while True:
         os.system('clear')
         print '\r\n\r\n'
-        subprocess.call(['figlet', '-cf', 'usaflag', 'Patriot VPN'])
+        subprocess.call(['figlet', '-cf', 'shadow', 'Patriot VPN'])
         print """
               ------------------------------------------------------\r\n
               [1] Create configs
