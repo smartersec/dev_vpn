@@ -47,7 +47,7 @@ def create_conf():
     srv_ip = raw_input('Server IP address:')
     lcl_pt = raw_input('Local port:')
     passw = getpass.getpass('Enter the VPN password:')
-    with open("/home/cmos/patvpn/%s.json" % nme, "w") as outfile:
+    with open("~/patvpn/%s.json" % nme, "w") as outfile:
         json.dump({"server":"%s" % srv_ip, "server_port":31333, "local_address":"127.0.0.1", "local_port":"%s" % int(lcl_pt), "password":"%s" % passw, "timeout":300, "method":"aes-256-cfb", "fast_open":False}, outfile, indent=4)
 
 
