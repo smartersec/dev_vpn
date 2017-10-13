@@ -7,7 +7,7 @@ import json
 import getpass
 
 def lsconf():
-    subprocess.call(['ls', '~/patvpn/'])
+    subprocess.call(['ls', '/root/patvpn/'])
 
 def connect():
     os.system('ls ~/patvpn/')
@@ -35,7 +35,7 @@ def speed():
 def enc():
     print 'Setting up encrypted file system....'
     os.system('encfs ~/.patvpn ~/patvpn')
-    os.system('ls -a ~/patvpn')
+    os.system('ls -a /root/patvpn')
 
 def umnt():
     print 'Unmounting encrypted file system....'
