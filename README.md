@@ -150,7 +150,7 @@ the folder. Just be sure to point your browsers
 download location to that folder.
 ```
 
-##### Pick option 1 to initialize the configs. When asked for the pass enter the pass given in the install guide(beta-testers)
+##### Pick option 1 to initialize the configs, then enter the server information noted in the install guide(beta-testers)
 
 ##### Pick option 3 then enter 
     pat 
