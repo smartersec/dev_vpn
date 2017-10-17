@@ -1,4 +1,4 @@
-# PatriotVPN
+# dev_VPN
 An extremely fast, end-to-end encrypted SOCKS5 proxy based on [Shadowsocks][1]
 
 [1]:<https://github.com/shadowsocks/shadowsocks/tree/master> "Shadowsocks github repo"
