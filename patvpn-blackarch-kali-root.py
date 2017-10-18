@@ -7,12 +7,12 @@ import json
 import getpass
 
 def lsconf():
-    subprocess.call(['ls', '/root/patvpn/'])
+    subprocess.call(['ls', '/root/dev_vpn/'])
 
 def connect():
-    os.system('ls ~/patvpn/')
+    os.system('ls ~/dev_vpn/')
     conf = raw_input('Choose a connection: ')
-    os.system('ss-local -c ~/patvpn/%s.json'% conf) 
+    os.system('ss-local -c ~/dev_vpn/%s.json'% conf) 
 
 
 def cont():
@@ -34,20 +34,20 @@ def speed():
 
 def enc():
     print 'Setting up encrypted file system....'
-    os.system('encfs ~/.patvpn ~/patvpn')
-    os.system('ls -a /root/patvpn')
+    os.system('encfs ~/.dev_vpn ~/dev_vpn')
+    os.system('ls -a /root/dev_vpn')
 
 def umnt():
     print 'Unmounting encrypted file system....'
-    os.system('fusermount -u ~/patvpn')
-    os.system('ls -a ~/patvpn')
+    os.system('fusermount -u ~/dev_vpn')
+    os.system('ls -a ~/dev_vpn')
 
 def create_conf():
     nme = raw_input('Config file name:')
     srv_ip = raw_input('Server IP address:')
     lcl_pt = raw_input('Local port:')
     passw = getpass.getpass('Enter the VPN password:')
-    with open("/root/patvpn/%s.json" % nme, "w") as outfile:
+    with open("/root/dev_vpn/%s.json" % nme, "w") as outfile:
         json.dump({"server":"%s" % srv_ip, "server_port":31333, "local_address":"127.0.0.1", "local_port":"%s" % int(lcl_pt), "password":"%s" % passw, "timeout":300, "method":"aes-256-cfb", "fast_open":False}, outfile, indent=4)
 
 
